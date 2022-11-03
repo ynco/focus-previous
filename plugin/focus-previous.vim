@@ -47,7 +47,9 @@ function! s:SetTabNr()
 
 	let t:winmru = []
 	let t:lastwin = 0
+	let l:i = winnr()
 	windo call s:SetWinNr()
+	exec i . "wincmd w"
 endfunction
 
 function! s:SetWinNr()
